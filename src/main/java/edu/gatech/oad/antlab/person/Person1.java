@@ -35,7 +35,7 @@ public class Person1 {
 		  String result = input.substring(2) + input.substring(0,2);
 		  return result;
 	  }
-	  return null;
+	  return input;
 	}
 	
 	/**
