@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'lib', include: 'resources.jar')
+}
+
+task hello {
+    doLast {
+        println 'Hello World!'
+    }
+}
+
+//  the assignment said it should be called 'compileTest', while gradle by default calls it 'compileTestJava'
+//  naming shouldn't matter, but this is an alias to satisfy the requirements
+//task compileTest {
