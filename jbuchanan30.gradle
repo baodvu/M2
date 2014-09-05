@@ -10,6 +10,12 @@ task hello {
     }
 }
 
-//  the assignment said it should be called 'compileTest', while gradle by default calls it 'compileTestJava'
-//  naming shouldn't matter, but this is an alias to satisfy the requirements
-//task compileTest {
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+            'Class-Path': 'lib/resources.jar ../../lib/resources.jar'
+        )
+    }
+}
+
